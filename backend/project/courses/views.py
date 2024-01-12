@@ -15,3 +15,8 @@ class CourseListFilterAPI(generics.ListAPIView):
     filterset_fields = ['category', 'name']
 
 
+
+class CategoryListAPI(generics.ListAPIView):
+    serializer_class = CategorySerializers
+    queryset = Category.objects.all()
+
